@@ -1,0 +1,51 @@
+{
+  "name": "wink-naive-bayes-text-classifier",
+  "version": "2.2.1",
+  "description": "Naive Bayes Text Classifier",
+  "keywords": [
+    "Naive Bayes",
+    "Classifier",
+    "Machine Learning",
+    "NLP",
+    "Natural Language Processing",
+    "Chatbot",
+    "Sentiment Analysis",
+    "winkNLP",
+    "Text Classification"
+  ],
+  "main": "src/wink-naive-bayes-text-classifier.js",
+  "scripts": {
+    "pretest": "npm run lint && npm run docs",
+    "test": "nyc --reporter=html --reporter=text mocha ./test/",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "sourcedocs": "docker -i src -o ./sourcedocs --sidebar no",
+    "docs": "jsdoc src/*.js -c .jsdoc.json",
+    "lint": "eslint ./src/*.js ./test/*.js ./runkit/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winkjs/wink-naive-bayes-text-classifier.git"
+  },
+  "author": "Sanjaya Kumar Saxena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winkjs/wink-naive-bayes-text-classifier/issues"
+  },
+  "homepage": "http://winkjs.org/wink-naive-bayes-text-classifier",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "coveralls": "^3.1.1",
+    "docdash": "github:winkjs/docdash",
+    "docker": "^0.2.14",
+    "eslint": "^8.26.0",
+    "jsdoc": "^3.6.11",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "wink-eng-lite-web-model": "^1.4.3",
+    "wink-helpers": "^2.0.0",
+    "wink-nlp": "^1.12.2"
+  },
+  "runkitExampleFilename": "./runkit/example.js"
+}
